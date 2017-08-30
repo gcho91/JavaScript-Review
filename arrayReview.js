@@ -4,29 +4,69 @@ var threeItems = [1,2,3];
 
   //code here
 
-
+function last(threeItems) {
+ var b= threeItems[threeItems.length-1];
+alert(b);
+}
+last(threeItems);
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
 
 
-//Loop through evenArray removing all values that aren't even 
+//Loop through evenArray removing all values that aren't even
 var evenArray = [1,2,3,6,22,98,45,23,22,12];
 
   //code here
+  ///////////////////filter method////
+var even = function(num) {
+  return num % 2 ===0;
+}
+
+evenArray.filter(even);
+
+  ////////////////////loooooop///
+  // function filter(evenArray) {
+  //
+  //   for (var i=0; i<evenArray.length; i++) {
+  //     if (evenArray[i] % 2 !==0) {
+  //       evenArray.splice(i,1);
+  //     }
+  //   }return evenArray;
+  // }
+  // filter(evenArray);
 
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
 
 
-//below you're given a function that will return a random number between 0 and 30 and an array full or numbers 'randomArray'. Your job is to write a function that will get a random number, then loop through the array to see if that random number is in the array. If it is, alert true, if it's not, alert false
+
+
+//below you're given a function that will return a random number between 0 and 30 and an array full of numbers 'randomArray'. Your job is to write a function that will get a random number, then loop through the array to see if that random number is in the array. If it is, alert true, if it's not, alert false
 var getRandomArbitrary = function() {
   return Math.floor(Math.random() * (30 - 0) + 0);
 }
 var randomArray = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
 
   //code here
+
+  function finder(randomArray) {
+    var randomNum = getRandomArbitrary;
+    for (var i=0; i<randomArray.length; i++) {
+      if (randomNum === randomArray[i]) {
+        alert (true);
+      }
+    }
+
+    alert(false);
+  }
+
+
+  //get random number
+  //loop thru array to see if that num is in the array
+  //if it is, alert true,
+  //if not, alert false
 
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
@@ -38,6 +78,9 @@ var first = [1,2,3,4,5];
 var second;
 
   //code here
+  //code here
+var second = [1,2,3,4,5];
+second.push(6,7);
 
 alert(first) //[1,2,3,4,5];
 alert(second) //[1,2,3,4,5,6,7];
@@ -58,7 +101,7 @@ var sentence = "Dev Mountain is the best"
 
 
 
-//write a function called capitalize that takes in the myPoem variable and capitalizes every word 
+//write a function called capitalize that takes in the myPoem variable and capitalizes every word
 var myPoem = 'What is a jQuery but a misunderstood object?'
 //What is a jQuery but a misunderstood object? --> What Is A JQuery But A Misunderstood Object?
 
